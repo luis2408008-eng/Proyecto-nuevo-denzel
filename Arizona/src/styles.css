@@ -71,7 +71,7 @@
   margin-right: auto;
 }
 
-/* Imagen representativa */
+/* Imagen representativa con marco similar a los cuadros */
 .about-image {
   width: 100%;
   max-width: 400px;
@@ -81,6 +81,10 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+
+  background-color: rgba(0,0,0,0.7);
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 /* Contenedor para tarjetas responsivas */
@@ -103,3 +107,4 @@
   max-width: 300px;
   box-sizing: border-box;
 }
+
