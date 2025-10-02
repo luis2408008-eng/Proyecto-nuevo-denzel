@@ -6,9 +6,19 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <app-root></app-root>
+
+  <!-- Barra de Navegación Fija -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">Sobre Nosotros</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+
  <div class="background">
 
   <!-- Cuadro alargado -->
@@ -27,7 +37,7 @@
   <img src="https://tse1.mm.bing.net/th/id/OIP.WomsF3ntkHbcZLjEgkdKXQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen representativa" class="about-image" />
 
   <!-- Sección Sobre Nosotros -->
-  <section class="about-section">
+  <section class="about-section" id="about">
     <h2>Sobre Nosotros</h2>
 
     <div class="cards-container">
@@ -45,50 +55,91 @@
       </div>
     </div>
   </section>
-<!-- Proyecto 1: Verde -->
-<div class="project-section glow-green">
-  <div class="project-name">Zamaro</div>
-  <div class="project-content">
-    <div class="project-description">
-      Un proyecto desarrollado para evitar tanta acumulación de ropa en el país esto es con la reutilización o transformación de ropa lomcual hace que se genere menos consumismo
-    </div>
-    <img src="https://media.es.wired.com/photos/66d094b8573dbae1acd0c70e/16:9/w_1920,c_limit/GettyImages-1392983528.jpg" alt="Imagen Proyecto Verde" class="project-image" />
-  </div>
-</div>
 
-<!-- Proyecto 2: Morado -->
-<div class="project-section glow-purple">
-  <div class="project-name">Emoinador</div>
-  <div class="project-content">
-    <div class="project-description">
-      Un rayo que busca hacer emo a las personas, llevo años con esto, 
-      pero Perry el Ornitorrinco siempre me lo arruina... 
-      ¡pero ya va en proceso y va muy bien!
+  <!-- Sección de Proyectos -->
+  <section id="projects">
+
+    <!-- Proyecto 1: Verde -->
+    <div class="project-section glow-green">
+      <div class="project-name">Zamaro</div>
+      <div class="project-content">
+        <div class="project-description">
+          Un proyecto desarrollado para evitar tanta acumulación de ropa en el país esto es con la reutilización o transformación de ropa lo cual hace que se genere menos consumismo
+        </div>
+        <img src="https://media.es.wired.com/photos/66d094b8573dbae1acd0c70e/16:9/w_1920,c_limit/GettyImages-1392983528.jpg" alt="Imagen Proyecto Verde" class="project-image" />
+      </div>
     </div>
 
-    <!-- Imagen del proyecto -->
-    <img src="https://tse1.mm.bing.net/th/id/OIP.R5ovDVTOFmiUieECFMXO4gHaEK?w=1280&h=720&rs=1&pid=ImgDetMain&o=7&rm=3" 
-         alt="Imagen Proyecto Emoinador" 
-         class="project-image" />
-  </div>
-</div>
-
-
-
-<!-- Proyecto 3: Rojo -->
-<div class="project-section glow-red">
-  <div class="project-name">App gaming</div>
-  <div class="project-content">
-    <div class="project-description">
-      Mi proyecto se basa en una lista de juegos mas jugados y recomendados para las personas que buscan jugar algo tranquilo en ratos libres.
-Este proyecto busca que las personas que sean gamers tengan recomendaciones de videojuegos buenos para pasar tiempo, teniendo apartados donde vengan los tipos de juegos y junto a esa el nombre de las aplicaciones
-
+    <!-- Proyecto 2: Morado -->
+    <div class="project-section glow-purple">
+      <div class="project-name">Emoinador</div>
+      <div class="project-content">
+        <div class="project-description">
+          Un rayo que busca hacer emo a las personas, llevo años con esto, 
+          pero Perry el Ornitorrinco siempre me lo arruina... 
+          ¡pero ya va en proceso y va muy bien!
+        </div>
+        <img src="https://tse1.mm.bing.net/th/id/OIP.R5ovDVTOFmiUieECFMXO4gHaEK?w=1280&h=720&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagen Proyecto Emoinador" class="project-image" />
+      </div>
     </div>
-    <img src="https://img.freepik.com/vector-gratis/logotipo-juegos-diseno-plano_23-2150747169.jpg?t=st=1759419152~exp=1759422752~hmac=0474fcdff7120797688d414604b3e84782f4ebf54bd580c14d619b0572613077&w=1480" alt="Imagen Proyecto Rojo" class="project-image" />
-  </div>
-</div>
+
+    <!-- Proyecto 3: Rojo -->
+    <div class="project-section glow-red">
+      <div class="project-name">App gaming</div>
+      <div class="project-content">
+        <div class="project-description">
+          Mi proyecto se basa en una lista de juegos mas jugados y recomendados para las personas que buscan jugar algo tranquilo en ratos libres.
+          Este proyecto busca que las personas que sean gamers tengan recomendaciones de videojuegos buenos para pasar tiempo, teniendo apartados donde vengan los tipos de juegos y junto a esa el nombre de las aplicaciones
+        </div>
+        <img src="https://img.freepik.com/vector-gratis/logotipo-juegos-diseno-plano_23-2150747169.jpg?t=st=1759419152~exp=1759422752~hmac=0474fcdff7120797688d414604b3e84782f4ebf54bd580c14d619b0572613077&w=1480" alt="Imagen Proyecto Rojo" class="project-image" />
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Sección de Contacto -->
+  <section class="contact-section" id="contact">
+    <h2>Contacto</h2>
+    <form class="contact-form" onsubmit="return validateForm()">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <p>&copy; 2025 Arizona. Todos los derechos reservados.</p>
+    <div class="social-links">
+      <a href="#" target="_blank">Facebook</a> |
+      <a href="#" target="_blank">Twitter</a> |
+      <a href="#" target="_blank">Instagram</a>
+    </div>
+  </footer>
 
 </div>
+
+<script>
+  function validateForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+      alert("Por favor completa todos los campos.");
+      return false;
+    }
+    return true;
+  }
+</script>
 
 </body>
 </html>
+
